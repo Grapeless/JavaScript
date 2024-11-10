@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    let c;
+    let ballence = 0;
+    while (true) {
+      c = +prompt(`请选择:\n1.取款\n2.存款\n3.查看余额\n4.退出`);
+      if(c===4){
+        break;
+      }
+      
+      let num = 0;
+      switch (c) {
+        case 1:
+          num = +prompt("取多少？:");
+          ballence -= num;
+          break;
+        case 2:
+          num = +prompt("存多少？:");
+          ballence += num;
+          break;
+        case 3:
+          alert(`余额:${ballence}`);
+          break;
+        default:
+          alert('1~4之间');
+
+      }
+    }
+  </script>
+</body>
+
+</html>

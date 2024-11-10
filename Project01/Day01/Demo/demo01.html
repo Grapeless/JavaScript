@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    table{
+    width: 500px;
+    margin: 0 auto;
+    table-layout: fixed;
+    border-collapse: collapse;
+
+   }
+   table,th,td{
+    border: 1px solid black;
+    text-align: center;
+   }
+   caption{
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+   } 
+  </style>
+</head>
+
+<body>
+
+  <script>
+    let td1 = prompt("商品名称：");
+    let td2 = +prompt("商品价格");
+    let td3 = +prompt("商品数量");
+    let td4 = td2 * td3;
+    let td5 = prompt("收获地址");
+    document.write(`
+  <table>
+    <caption>订单确认</caption>
+    <thead>
+      <th>商品名称</th>
+      <th>商品价格</th>
+      <th>商品数量</th>
+      <th>总价</th>
+      <th>收货地址</th>
+    </thead>
+    <tbody>
+      <tr>
+        <td>${td1}</td>
+        <td>${td2}元</td>
+        <td>${td3}</td>
+        <td>${td4}元</td>
+        <td>${td5}</td>
+      </tr>
+    </tbody>
+  </table>
+    `)
+
+  </script>
+</body>
+
+</html>

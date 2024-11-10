@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    header,
+    footer {
+      display: flex;
+      justify-content: space-evenly;
+    }
+
+    header {
+      margin: 0 auto;
+      width: 500px;
+      height: 250px;
+      border-left: 1px solid pink;
+      border-bottom: 1px solid pink;
+    }
+
+    .inner {
+      width: 100px;
+      display: flex;
+      justify-content: flex-end;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .inner>div {
+      width: 50px;
+      height: 100px;
+      background-color: pink;
+    }
+
+
+    footer {
+      margin: 0 auto;
+      width: 500px;
+    }
+
+    footer>span {
+      width: 100px;
+      text-align: center;
+      font-size: 13px;
+    }
+    header>div:nth-child(1)>div{
+      height: 50px ;
+    }
+  </style>
+</head>
+
+<body>
+  <script>
+    let a = []
+    for (let i = 0; i < 4; i++) {
+      a.push(+prompt(`输入第${i+1}季度的值:`))
+    }
+    document.write(`
+    <style>
+    header>div:nth-child(1)>div{
+      height: ${a[0]}px ;
+    }
+    header>div:nth-child(2)>div{
+      height: ${a[1]}px ;
+    }
+    header>div:nth-child(3)>div{
+      height: ${a[2]}px ;
+    }
+    header>div:nth-child(4)>div{
+      height: ${a[3]}px ;
+    }
+    </style>
+
+    <header>
+    <div class="inner">
+      <span>${a[0]}</span>
+      <div></div>
+    </div>
+
+    <div class="inner">
+      <span>${a[1]}</span>
+      <div></div>
+    </div>
+
+    <div class="inner">
+      <span>${a[2]}</span>
+      <div></div>
+    </div>
+
+    <div class="inner">
+      <span>${a[3]}</span>
+      <div></div>
+    </div>
+  </header>
+
+  <footer>
+    <span>第一季度</span>
+    <span>第二季度</span>
+    <span>第三季度</span>
+    <span>第四季度</span>
+  </footer>
+    `)
+  </script>
+</body>
+
+</html>
