@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    //具名函数
+    /*let a = +prompt("输入秒数")
+
+    function calculate(sec) {
+        let h, m, s
+        h = parseInt(sec / 3600)
+        m = parseInt((sec - h * 3600) / 60)
+        s = sec % 60
+        return [h, m, s]
+    }
+
+    let arr = calculate(a)
+    console.log("hour:" + arr[0])
+    console.log("min:" + arr[1])
+    console.log("sec:" + arr[2])*/
+
+    //函数表达式
+    /*let sec = +prompt("输入秒数")
+    let v = function (sec){
+        let h, m, s
+        h = parseInt(sec / 3600)
+        m = parseInt((sec - h * 3600) / 60)
+        s = sec % 60
+        return [h, m, s]
+    }
+    let arr = v(sec)
+    console.log("hour:" + arr[0])
+    console.log("min:" + arr[1])
+    console.log("sec:" + arr[2])*/
+
+    //立即执行函数
+    let sec = +prompt("输入秒数");
+    (function (sec){
+        let h, m, s
+        h = parseInt(sec / 3600)
+        m = parseInt((sec - h * 3600) / 60)
+        s = sec % 60
+        console.log("hour:" + h)
+        console.log("min:" + m)
+        console.log("sec:" + s)
+    })(sec);
+
+
+</script>
+</body>
+</html>

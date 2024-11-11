@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let f = function (){
+      console.log(666)
+    }
+    f()
+
+    //立即执行函数 
+    //1. (function(){})()
+    (function(x,y){
+      console.log(x+y);
+    //2.(function(){}())
+   
+    })(1,2);
+    (function(x,y){
+      console.log(x1y);
+      
+    }(1,2));
+  </script>
+</body>
+</html>

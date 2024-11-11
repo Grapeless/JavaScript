@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    /*function sum(a,b){
+      return a+b
+    }
+    console.log(sum(4, 6))*/
+
+
+    /*function changeNum(a,b) {
+        let t
+        t = a
+        a = b
+        b = t
+        console.log("第一个数" + a)
+        console.log("第二个数" + b)
+    }
+    changeNum(a,b)
+    changeNum()*/
+
+    /*function handleData(arr, flag) {
+        let sum = 0
+        for (let i = 0; i < arr.length; i++) {
+            sum += arr[i]
+        }
+        let avg = sum / arr.length
+        if (flag || flag === undefined) {
+            return sum
+        } else return avg
+    }
+
+    let arr = [1, 2, 3, 4];
+    console.log(handleData(arr));
+    console.log(handleData(arr, true));
+    console.log(handleData(arr, false));*/
+
+    /*function some(ele, arr) {
+        for (let i = 0; i < arr.length; i++) {
+            if (ele === arr[i]) {
+                return true
+            }
+        }
+        return false
+    }
+    let re = some('苹果', ['苹果', '香蕉', '橘子', '荔枝', '梨子'])
+    let re1 = some('榴莲', ['苹果', '香蕉', '橘子', '荔枝', '梨子'])
+    console.log(re)
+    console.log(re1)*/
+
+    /*function findIndex(ele,arr){
+        for (let i = 0; i < arr.length; i++) {
+            if (ele === arr[i]) {
+                return i
+            }
+        }
+        return -1
+    }
+    let re = findIndex('苹果', ['苹果', '香蕉', '橘子', '荔枝', '梨子'])
+    let re1 = findIndex('榴莲', ['苹果', '香蕉', '橘子', '荔枝', '梨子'])
+    console.log(re)
+    console.log(re1)*/
+
+    function getSumArr(arr) {
+        let sum = 0
+        for (let i = 0; i < arr.length; i++) {
+            sum += arr[i]
+        }
+        return sum
+    }
+    console.log(getSumArr([10, 20, 30, 40]))
+
+</script>
+</body>
+</html>
