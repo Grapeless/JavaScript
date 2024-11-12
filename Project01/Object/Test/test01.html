@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    let goods = {
+      name: "JavaScript",
+      num: "ISBN 978-7-111-67722-2",
+      weight: "700g",
+      'address': "xxx"
+    }
+    console.log(goods);
+
+    // console.log(typeof goods);
+
+   /* goods.name = 'js'
+    goods.color = 'black'
+    console.log(goods['num'])
+    console.log(goods)*/
+
+    let obj = {
+      sing:function (songName){
+        console.log(songName)
+      },
+      'dance':function () {
+        console.log('dancing')
+      }
+    }
+    obj.dance()
+    obj.sing('cheese bar')
+
+  </script>
+</body>
+
+</html>

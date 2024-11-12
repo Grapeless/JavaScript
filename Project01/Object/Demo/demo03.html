@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    let aim = Math.floor(Math.random() * 10) + 1
+    let a
+    while (true) {
+      a = +prompt('请输入')
+      if (a < aim) {
+        alert('小了')
+      } else if (a > aim) {
+        alert('大了')
+      } else break
+    }
+    alert('猜对了')
+  </script>
+</body>
+
+</html>

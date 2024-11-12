@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+<script>
+    function getRandomColor(flag) {
+        let colorString = ''
+        if (flag === undefined || flag === true) {
+            for (let i = 0; i < 6; i++) {
+                colorString += (Math.floor(Math.random() * 17)).toString(16)
+            }
+            return '#' + colorString
+        } else {
+            let arr = []
+            for (let i = 0; i < 3; i++) {
+                arr[i] = (Math.floor(Math.random() * 256))
+            }
+            return `rgb(${arr[0]},${arr[1]},${arr[2]})`
+        }
+    }
+
+    let color = getRandomColor(false)
+    document.write(`
+        <style>
+           div{
+             background-color:${color};
+            }
+        </style>
+      `)
+</script>
+<div></div>
+</body>
+
+</html>
