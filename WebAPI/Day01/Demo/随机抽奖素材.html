@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>年会抽奖</title>
+    <style>
+        body {
+            height: 100vh;
+            width: 100vw;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .wrapper {
+            width: 840px;
+            height: 420px;
+            background: url(./images/bg01.jpg) no-repeat center / cover;
+            padding: 100px 250px;
+            box-sizing: border-box;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+<div class="wrapper">
+    <strong>抽个奖吧</strong>
+    <h1>一等奖：<span id="one">???</span></h1>
+    <h3>二等奖：<span id="two">???</span></h3>
+    <h5>三等奖：<span id="three">???</span></h5>
+</div>
+<script>
+    const uname = ['周杰伦', '刘德华', '周星驰', '你', '张学友']
+    const content = document.querySelectorAll('span')
+    for (let i = 0; i < content.length; i++) {
+        let index = Math.floor(Math.random() * uname.length)
+        content[i].innerHTML = `${uname[index]}`
+        uname.splice(index, 1)
+    }
+</script>
+</body>
+
+</html>

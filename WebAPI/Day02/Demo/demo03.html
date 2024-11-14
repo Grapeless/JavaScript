@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .outer {
+            box-sizing: border-box;
+            width: 170px;
+            height: 200px;
+        }
+
+        input {
+            width: 170px;
+            height: 40px;
+            border-radius: 0;
+            border: 2px solid #eee;
+            padding-left: 10px;
+            transition: all 0.2s linear;
+        }
+
+
+        input:hover {
+            border: 2px solid gray;
+
+        }
+
+        input:focus {
+            outline: none;
+            border: 2px solid rgb(255, 213, 0);
+        }
+
+        ul {
+            display: flex;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            height: 160px;
+            font-size: 12px;
+            flex-direction: column;
+            justify-content: space-evenly;
+            border: 2px solid rgb(255, 213, 0);
+            border-top: 0;
+            display: none;
+        }
+
+        li {
+            padding-left: 10px;
+            cursor: pointer;
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+        }
+
+        li:hover {
+            background-color: rgb(255, 213, 0);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="outer">
+        <input type="search" placeholder="小米笔记本">
+        <ul>
+            <li><a href="#">全部商品</a></li>
+            <li><a href="#">小米11</a></li>
+            <li><a href="#">小米10S</a></li>
+            <li><a href="#">小米笔记本</a></li>
+            <li><a href="#">小米手机</a></li>
+            <li><a href="#">黑鲨4</a></li>
+            <li><a href="#">空调</a></li>
+        </ul>
+    </div>
+    <script>
+        const inputBox = document.querySelector('input')
+        const ul = document.querySelector('ul')
+        inputBox.addEventListener('focus', function () {
+            ul.style.display = 'flex'
+        })
+        inputBox.addEventListener('blur', function () {
+            ul.style.display = 'none'
+        })
+    </script>
+</body>
+
+</html>

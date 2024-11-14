@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+      div {
+          width: 300px;
+          height: 300px;
+          margin: 0 auto;
+      }
+
+      textarea {
+          margin: 0;
+          padding: 0;
+          width: 300px;
+          height: 250px;
+      }
+  </style>
+</head>
+
+<body>
+  <div>
+    <label>
+      <textarea name="" id="">里面是用户协议</textarea>
+    </label>
+    <button type="button">我已阅读用户协议(5)</button>
+  </div>
+  <script>
+      const button = document.querySelector('button')
+      button.disabled = true
+      let count = 5
+
+      let n = setInterval(setCount, 1000)
+
+      function setCount() {
+          count--
+          button.innerHTML = `我已阅读用户协议(${count})`
+          if (count === 0) {
+              clearInterval(n)
+              button.disabled = false
+              button.innerHTML = `我已阅读用户协议`
+          }
+      }
+
+
+
+
+
+  </script>
+</body>
+
+</html>

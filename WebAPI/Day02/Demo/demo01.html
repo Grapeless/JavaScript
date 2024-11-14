@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <style>
+      div {
+          width: 700px;
+          height: 150px;
+          background-color: coral;
+          line-height: 150px;
+          font-weight: bold;
+          font-size: 80px;
+          text-align: center;
+          margin: 0 auto;
+          position: relative;
+      }
+      .button {
+          box-sizing: border-box;
+          margin: 3px;
+          width: 20px;
+          height: 20px;
+          position: absolute;
+          text-align: center;
+          text-indent: 0;
+          right: 0;
+          top: 0;
+          font-size: 16px;
+          line-height: 20px;
+          background-color: chartreuse;
+          cursor: pointer;
+      }
+  </style>
+</head>
+<body>
+  <div class="outer">
+    我是广告
+    <div class="button">X</div>
+  </div>
+  <script>
+  const button = document.querySelector('.button')
+  const outerBox = document.querySelector('.outer')
+  button.addEventListener('click',function (){
+      outerBox.style.display = 'none'
+  })
+  </script>
+</body>
+</html>

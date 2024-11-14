@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+      .outer {
+          width: 500px;
+          height: 200px;
+          display: flex;
+          flex-direction: column;
+          margin: 50px auto 0;
+          border: 1px solid gray;
+          /* background-color: aliceblue; */
+          align-items: center;
+
+      }
+
+      .title {
+          height: 50px;
+          font-size: 20px;
+          font-weight: bold;
+      }
+
+      .result {
+          font-size: 20px;
+          width: 450px;
+          height: 50px;
+      }
+
+      .name {
+          color: red;
+      }
+
+      button {
+          width: 80px;
+          height: 30px;
+          margin-bottom: 20px;
+          cursor: pointer;
+      }
+
+      .button {
+          width: 250px;
+          height: 100px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+      }
+      .list{
+          margin: 0 auto;
+          width: 500px;
+      }
+  </style>
+</head>
+
+<body>
+  <div class="outer">
+    <span class="title">随机点名</span>
+    <span class="result">名字是：<span class="name">${}</span></span>
+    <div class="button">
+      <button type="button">开始</button>
+      <button type="button" >结束</button>
+    </div>
+  </div>
+  <div class="list"></div>
+  <script>
+      const arr = ['马超', '黄忠', '赵云', '关羽', '张飞']
+      const result = document.querySelector('.name')
+      const start = document.querySelector('div>button:first-child')
+      const end = document.querySelector('div>button:last-child')
+      const list = document.querySelector('.list')
+
+      //随机索引
+      let randIndex
+      //定时器ID
+      let n
+      //序号
+      let i = 0
+      start.addEventListener('click', function () {
+          //若arr里面名字还没抽完
+          if(arr.length!==0){
+              //每0.1s抽一次
+              n = setInterval(function () {
+                  randIndex = Math.floor(Math.random() * arr.length)
+                  result.innerHTML = arr[randIndex]
+              }, 100)
+              //同时禁用开始按钮，防止定时器多开
+              start.disabled = true
+          }else {
+              //名字全部抽完，禁用全部按钮
+              start.disabled = true
+              end.disabled = true
+          }
+      })
+      end.addEventListener('click', function () {
+          //存在自己触发的定时器时
+          if (n !== undefined) {
+              i++
+              //关闭定时器
+              clearInterval(n)
+              //记录抽到的名字
+              list.innerHTML = `${list.innerHTML}${i}${arr[randIndex]}&nbsp;`
+              //删除刚抽到名字
+              arr.splice(randIndex, 1)
+              //解除开始按钮禁用
+              start.disabled = false
+          }
+      })
+
+  </script>
+</body>
+
+</html>
