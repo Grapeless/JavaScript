@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text">
+    <script>
+        const text = document.querySelector('input')
+        //按下不放会连续触发
+        text.addEventListener('keydown',function(){
+            console.log(1);
+        
+        })
+        text.addEventListener('keyup',function(){
+            console.log(2);
+        
+        })
+    </script>
+</body>
+</html>

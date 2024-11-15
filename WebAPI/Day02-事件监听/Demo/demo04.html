@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+      .outer {
+          margin: 10px auto 0;
+          width: 500px;
+          height: 50px;
+          position: relative;
+
+      }
+
+      textarea {
+          box-sizing: border-box;
+          border: 0;
+          width: 400px;
+          height: 50px;
+          vertical-align: middle;
+          background-color: #f5f5f5;
+          padding: 10px 0 0 10px;
+          border-radius: 5px;
+          resize: none;
+
+      }
+
+      textarea:focus {
+          outline: none;
+      }
+
+      /* 如何去掉textarea右下角的样式 */
+      textarea::placeholder {
+          font-family: '微软雅黑', sans-serif;
+      }
+
+      button {
+          padding: 0;
+          border: 0;
+          border-radius: 5px;
+          /* margin: 0; */
+          width: 70px;
+          height: 50px;
+          background-color: rgb(90, 208, 255);
+          color: white;
+          cursor: pointer;
+      }
+
+      .stat {
+          width: 60px;
+          height: 20px;
+          line-height: 20px;
+          position: absolute;
+          top: 50px;
+          left: 340px;
+          font-size: 12px;
+          color: gray;
+          text-align: right;
+          opacity: 0;
+          /* display: none; */
+          transition: all 0.1s linear;
+      }
+  </style>
+</head>
+
+<body>
+  <div class="outer">
+    <form action="">
+      <textarea name="comment" maxlength="200" placeholder="发一条友善的评论"></textarea>
+      <button type="submit">发布</button>
+    </form>
+    <div class="stat">2/200字</div>
+  </div>
+  <script>
+      const stat = document.querySelector('.stat')
+      const textarea = document.querySelector('textarea')
+
+      textarea.addEventListener('focus',function (){
+          // stat.style.display = 'block'
+          stat.style.opacity = '1'
+      })
+      textarea.addEventListener('blur',function (){
+          // stat.style.display  = 'none'
+          stat.style.opacity = '0'
+      })
+      textarea.addEventListener('input', function () {
+          stat.innerHTML = `${textarea.value.length}/200字`
+      })
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    /*[type="checkbox"]{
+        width: 100px;
+    }*/
+
+  </style>
+</head>
+
+<body>
+  <input type="checkbox">
+  <button disabled>同意协议以继续</button>
+  <script>
+    const checkbox = document.querySelector('[type="checkbox"]')
+    const button = document.querySelector('button')
+    checkbox.addEventListener('click',function () {
+        button.disabled = !this.checked
+    })
+  </script>
+</body>
+</html>
