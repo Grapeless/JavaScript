@@ -1,0 +1,31 @@
+1.DOM,DOM树,DOM对象与document对象
+
+2.获取DOM对象
+    2.1 document.querySelector('css选择器')
+    2.2 document.querySelectorAll('css选择器')
+    2.3 document.getElement(s)by(ID/TagName/ClassName)
+
+3.操作元素内容
+    3.1 .innerText .innerHTML
+    3.2  基础属性
+    3.3  样式属性
+        3.3.1 .style.backgroundColor 小驼峰原则
+        3.3.2 .className 给元素覆盖一个class属性。如何保留原来的class属性值?
+        3.3.3 .classList.(add/remove/toggle)  追加/有则移除/有则移除，无则追加
+    3.4 表单属性之 disabled,checked,selected
+    3.5 自定义属性及获取自定义属性的值：data-id=""(以data-开头)   .dataset.id
+
+4.定时器
+    4.1 let n = setInterval(function(){},时间间隔)
+    4.2 clearInterval(n)
+
+
+
+
+
+
+
+
+
+
+

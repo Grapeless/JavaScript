@@ -1,0 +1,54 @@
+1.事件流
+2.事件捕获
+    2.1 L0无捕获
+    2.2 L2设置监听函数第三个参数为true。默认为false（冒泡）
+
+3.事件冒泡
+    3.1 阻止冒泡与阻止默认行为
+
+4.解绑事件
+    4.1 LO声明同名函数赋null
+    4.2 L2使用removeEventListener 参数与对应的监听函数一致
+
+5.事件委托
+    5.1 e.target 与 e.target.tagName
+
+7-9.其他事件
+7.加载
+    7.1 window.addEventListener('load',function(){})，
+    7.2 document.addEventListener('DOMContentLoaded', function () {})
+
+8.滚动
+    8.1 对于整个窗口 (window/document).addEventListener('scroll',function(){})
+    8.2 对于一般DOM元素
+    8.3 document.documentElement => html标签
+    8.4 scrollTop,scrollLeft 可读写,被卷去的宽高  --1
+    8.5 window.scrollTo(x,y)方法
+    8.6 滚动整个窗口：设值document.documentElement.scroll(Top/Left)或使用window.scrollTo(x,y)方法
+
+9.'resize'
+    9.1 对于整个窗口 window.addEventListener('resize', function(){})
+    9.2 clientWidth,clientHeight 只读，元素宽高，不含边框,外边距,滚动条  --2
+
+10.元素的尺寸与位置
+    10.1 offsetWidth,offsetHeight 只读，元素宽高，不含外边距  --3
+    10.2 offsetLeft,offsetTop 只读，与其最近的定位元素的距离  --4
+    10.3 .getBoundingClientRect()方法，返回元素的大小及其相对于视口的位置
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
