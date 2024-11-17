@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <style>
+    div{
+        width: 200px;
+        height: 100px;
+        border: 1px solid gray;
+    }
+  </style>
+
+</head>
+<body>
+  <div></div>
+  <script>
+      let date
+      let month = 0
+      let hour = 0
+      let minute = 0
+      let sec = 0
+      const div = document.querySelector('div')
+      // console.log(day)
+      /*setInterval(function () {
+          date = new Date()
+          month = (date.getMonth() + 1) < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1
+          hour = (date.getHours()) < 10 ? '0' + date.getHours() : date.getHours()
+          minute = (date.getMinutes()) < 10 ? '0' + date.getMinutes() : date.getMinutes()
+          sec = (date.getSeconds()) < 10 ? '0' + date.getSeconds() : date.getSeconds()
+          div.innerHTML = `${date.getFullYear()}-${month}-${date.getDate()} ${hour}:${minute}:${sec}`
+      }, 1000)*/
+      document.write(new Date().toLocaleString()+' ')
+      document.write(new Date().toLocaleDateString()+' ')
+      document.write(new Date().toLocaleTimeString()+' ')
+      
+
+  </script>
+</body>
+</html>

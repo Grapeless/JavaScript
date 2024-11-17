@@ -68,10 +68,10 @@
 <body>
 
     <div class="aside">
-        <div class="item active">男装/女装</div>
-        <div class="item">儿童服装/游乐园</div>
-        <div class="item">电子产品</div>
-        <div class="item">电影/美食</div>
+        <div class="item active" data-id="0">男装/女装</div>
+        <div class="item" data-id="1">儿童服装/游乐园</div>
+        <div class="item" data-id="2">电子产品</div>
+        <div class="item" data-id="3">电影/美食</div>
     </div>
 
     <div class="content">
@@ -83,22 +83,19 @@
 
     <script>
 
-        // 1. 获元取素  
-        const items = document.querySelectorAll('.item')
-        // 内容的盒子获取
-        const neirongs = document.querySelectorAll('.neirong')
-        // 2. 左侧aside 模块 点击谁，谁高亮
-        for (let i = 0; i < items.length; i++) {
-            items[i].addEventListener('click', function () {
-                // 找到上一个active 移除类
-                document.querySelector('.aside .active').classList.remove('active')
-                // 点击谁谁添加类
-                this.classList.add('active')
-                // 3. 右侧内容跟随走动  让页面滚动到对应的offsetTop值位置
-                // console.log(neirongs[i].offsetTop) 不用给单位
-                document.documentElement.scrollTop = neirongs[i].offsetTop
-            })
-        }
+        const aside = document.querySelector('.aside')
+        const contents = document.querySelectorAll('.neirong')
+        aside.addEventListener('click',function (e) {
+            // console.log(e)
+            //高亮与移除高亮
+            document.querySelector('.aside .active').classList.remove('active')
+            e.target.classList.add('active')
+            //给点击对象加自定义属性-序号，根据序号找到内容对象
+            //用循环，用i
+            //利用规律/特殊的class属性值？
+            document.documentElement.scrollTop = contents[e.target.dataset.id].offsetTop
+
+        })
 
     </script>
 </body>

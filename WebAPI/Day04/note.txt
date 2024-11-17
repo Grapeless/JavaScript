@@ -1,0 +1,14 @@
+1.日期对象 Date
+    1.1 实例化
+    1.2 方法 年/月/日/星期数/时/分/秒
+    1.3 .toLocaleString()等
+    1.4 获得时间戳：实例化方法，+匿名对象实例化方法，静态方法
+2-n（操作元素节点）
+2.查找节点
+    2.1 .parentNode
+    2.2 .children 返回NodeList
+    2.3 .nextElementSibling与.previousElementSibling
+
+3.增加节点
+    3.1 先document.createElement('节点名')创建e
+    3.2 再插入 .appendChild(e)与.insertBefore(e,)
