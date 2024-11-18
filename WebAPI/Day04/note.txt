@@ -4,11 +4,27 @@
     1.3 .toLocaleString()等
     1.4 获得时间戳：实例化方法，+匿名对象实例化方法，静态方法
 2-n（操作元素节点）
-2.查找节点
-    2.1 .parentNode
-    2.2 .children 返回NodeList
+
+2.查找Element节点
+    2.1 .parentElement
+    2.2 .children(返回NodeList),.firstElementChild与.lastElementChild
     2.3 .nextElementSibling与.previousElementSibling
 
-3.增加节点
-    3.1 先document.createElement('节点名')创建e
-    3.2 再插入 .appendChild(e)与.insertBefore(e,)
+3.查找节点(包括Element，Text，Comment节点)
+    3.1 .parentNode
+    3.2 .childNodes(NodeList),firstChild与.lastChild
+    3.3 .previousSibling与.nextSibling
+
+(增，删节点-old
+    4.1 先document.createElement('节点名')创建e
+    4.2 再插入 父元素.appendChild(e)与父元素.insertBefore(e,'在哪个节点对象之前')
+    )
+
+4.增与删,替换与克隆
+    4.1 增加孩子: .append(...),.prepend(...)  只对Element节点可用
+    4.2 增加兄弟：.after(...),.before(...)
+    4.3 删除自己：.remove()
+    4.4 替换自己: .replaceWith(...)
+    4.5 克隆自己：.cloneNode(true/false(默认) ,记得其返回
+
+5.M端事件
