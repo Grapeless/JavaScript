@@ -12,7 +12,7 @@
 
 3.查找节点(包括Element，Text，Comment节点)
     3.1 .parentNode
-    3.2 .childNodes(NodeList),firstChild与.lastChild
+    3.2 .childNodes(返回NodeList),firstChild与.lastChild
     3.3 .previousSibling与.nextSibling
 
 (增，删节点-old
