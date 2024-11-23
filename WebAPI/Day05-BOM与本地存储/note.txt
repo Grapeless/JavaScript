@@ -1,0 +1,43 @@
+1.BOM-window{document,navigator,location,history,screen}
+
+2.setTimeout(,)
+
+3.同步与异步任务，事件循环
+
+4.location-地址栏
+    4.1 .href,.search,.hash,reload()
+
+5.navigator
+    5.1 .userAgent
+
+6.history
+    6.1 back(),forward(),go()
+
+7.localStorage与sessionStorage
+    7.1 .setItem(key,value) .getItem(key) .removeItem(key)
+
+8.JSON.stringify(引用数据类型)与JSON.parse(JSON字符串)
+
+9. .map(function(v,i,a){})  .join(...)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
