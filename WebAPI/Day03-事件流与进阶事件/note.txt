@@ -23,7 +23,7 @@
     8.2 对于一般DOM元素
     8.3 document.documentElement => html标签
     8.4 scrollTop,scrollLeft 可读写,被卷去的宽高  --1
-    8.5 window.scrollTo(x,y)方法
+    8.5 获取页面的被卷去的宽高：document.documentElement.scroll(Top/Left)
     8.6 滚动整个窗口：设值document.documentElement.scroll(Top/Left)或使用window.scrollTo(x,y)方法
 
 9.'resize'

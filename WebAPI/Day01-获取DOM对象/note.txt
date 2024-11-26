@@ -11,7 +11,7 @@
     3.3  样式属性
         3.3.1 .style.backgroundColor 小驼峰原则
         3.3.2 .className 给元素覆盖一个class属性。如何保留原来的class属性值?
-        3.3.3 .classList.(add/remove/toggle)  追加/有则移除/有则移除，无则追加
+        3.3.3 .classList.(add/remove/toggle/contains)  追加/有则移除/有则移除，无则追加
     3.4 表单属性之 disabled,checked,selected
     3.5 自定义属性及获取自定义属性的值：data-id=""(以data-开头)   .dataset.id
 

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <style>
+      body {
+          height: 4000px;
+          margin: 0;
+      }
+
+      button {
+          background-color: palegoldenrod;
+      }
+
+      .test {
+          background-color: paleturquoise;
+          width: 250px;
+          height: 150px;
+          position: fixed;
+          top: 0;
+          left: calc(50% - 125px);
+          color: #0099ff;
+          display: flex;
+          align-items: center;
+          line-height: 30px;
+      }
+
+      .backToTop {
+          width: 30px;
+          height: 50px;
+          background-color: gray;
+          position: fixed;
+          right: 0;
+          bottom: 50px;
+          cursor: pointer;
+          display: none;
+      }
+  </style>
+</head>
+<body>
+  <div class="test"></div>
+  <div class="backToTop"></div>
+  <button class="button1">0.5倍页面总高度1</button>
+  <button class="button2">0.5倍页面总高度2</button>
+  <script>
+      //初始页面总高
+      document.addEventListener('DOMContentLoaded', function () {
+          console.log(document.documentElement.scrollHeight)
+      })
+
+      //到半页面高度1
+      const button1 = document.querySelector('.button1')
+      button1.addEventListener('click', function () {
+          window.scrollTo(0, 0.5 * document.documentElement.scrollHeight)
+      })
+      //到半页面高度2
+      const button2 = document.querySelector('.button2')
+      button2.addEventListener('click', function () {
+          window.scrollTo(0, 0.5 * (document.documentElement.scrollHeight - 2 * window.innerHeight))
+      })
+
+
+      const test = document.querySelector('.test')
+      const backToTop = document.querySelector('.backToTop')
+      document.addEventListener('scroll', function () {
+          //页面总高度
+          const pageHeight = document.documentElement.scrollHeight
+          //视口高度
+          const viewPortHeight = window.innerHeight
+          //页面被卷去的高度
+          const pageScrollTop = document.documentElement.scrollTop
+
+          //混动条顶部至滚动块中心占整个页面比例
+          if (((pageScrollTop + 0.5 * viewPortHeight) / (pageHeight)) >= 0.5) {
+              test.innerHTML = `页面总高度:${pageHeight}<br>视口高度:${viewPortHeight}<br>
+                                被卷去高度:${pageScrollTop}`
+
+              backToTop.style.display = 'block'
+          } else {
+              test.innerHTML = `页面总高度:${pageHeight}<br>视口高度:${viewPortHeight}<br>
+                                被卷去高度:${pageScrollTop}`
+
+              backToTop.style.display = 'none'
+          }
+      })
+      //     <br>视口高度+被卷去高度:${viewPortHeight+pageScrollTop}
+  </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+</head>
+<body>
+  <textarea cols="30" rows="10"></textarea>
+  <button>过滤</button>
+  <p></p>
+  <script>
+      const textarea = document.querySelector('textarea')
+      const button = document.querySelector('button')
+      const regex = /sb/ig
+      button.addEventListener('click', function () {
+          console.log(textarea.value.replace(regex, '**'))
+          button.nextElementSibling.innerHTML = textarea.value.replace(regex, '**')
+      })
+  </script>
+</body>
+</html>

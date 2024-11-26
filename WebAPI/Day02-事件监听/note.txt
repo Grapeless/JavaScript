@@ -2,7 +2,8 @@
     1.1 L0 .onclick = function(){}
     1.2 L2 .addEventListener('click',function(){}}
 
-2.基础事件类型：click,mouseenter,mouseleave,focus,blur,keydown,keyup,input
+2.基础事件类型：click,(mouseenter,mouseleave 无冒泡),(mouseover/out)focus,blur,keydown,keyup,input
+              mousemove,submit,change
 
 3.事件对象：e
     3.1 e.type,e.clientX/clientY,e.offsetX/offsetY,e.key
