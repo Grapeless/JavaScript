@@ -8,7 +8,7 @@
     4.1 .href,.search,.hash,reload()
 
 5.navigator
-    5.1 .userAgent
+    5.1 .userAgent (系统信息,客户端信息)
 
 6.history
     6.1 back(),forward(),go()

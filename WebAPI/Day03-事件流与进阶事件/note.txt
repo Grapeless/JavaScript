@@ -22,18 +22,42 @@
     8.1 对于整个窗口 (window/document).addEventListener('scroll',function(){})
     8.2 对于一般DOM元素
     8.3 document.documentElement => html标签
+
     8.4 scrollTop,scrollLeft 可读写,被卷去的宽高  --1
-    8.5 获取页面的被卷去的宽高：document.documentElement.scroll(Top/Left)
-    8.6 滚动整个窗口：设值document.documentElement.scroll(Top/Left)或使用window.scrollTo(x,y)方法
+    8.5 scrollHeight,scrollWidth 只读,元素(margin以内)(包含被卷去)的宽高。(无滚动条时与clientHeight/Width相等)
+    8.6 获取页面的被卷去的宽高：document.documentElement.scroll(Top/Left)
+    8.7 滚动整个窗口：设值document.documentElement.scroll(Top/Left)或使用window.scrollTo(x,y)方法
 
 9.'resize'
     9.1 对于整个窗口 window.addEventListener('resize', function(){})
-    9.2 clientWidth,clientHeight 只读，元素宽高，不含边框,外边距,滚动条  --2
+    9.2 clientWidth,clientHeight 只读，元素(padding以内)宽高。（不含边框，滚动条，外边距）  --2
+    9.3 clientLeft和clientTop：只读，左边框与上边框的长度
 
 10.元素的尺寸与位置
-    10.1 offsetWidth,offsetHeight 只读，元素宽高，不含外边距  --3
-    10.2 offsetLeft,offsetTop 只读，与其最近的定位元素的距离  --4
+    10.1 offsetWidth,offsetHeight 只读，元素(margin以内)宽高。（不含外边距）  --3
+    10.2 offsetLeft,offsetTop 只读，与其最近的定位元素的距离
+
     10.3 .getBoundingClientRect()方法，返回元素的大小及其相对于视口的位置
+
+
+
+
+    .getBoundingClientRect().~
+                ~.top：元素顶部到视口顶部的距离
+                ~.right：元素右边到视口左边的距离
+                ~.bottom：元素底部到视口顶部的距离
+                ~.left：元素左边到视口左边的距离
+                ~.width：元素的宽度
+                ~.height：元素的高度
+
+    window.innerHeight
+
+    pageX 和 pageY：相对于整个文档的坐标，考虑了页面的滚动。
+    clientX 和 clientY：相对于浏览器视口的坐标，不受滚动影响。
+    screenX 和 screenY：相对于屏幕左上角的坐标。
+    offsetX 和 offsetY：相对于触发事件的元素的坐标。
+
+    1,2,3组属性的参考：https://juejin.cn/post/7116306912198524959
 
 
 
