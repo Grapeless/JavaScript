@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div></div>
+  <script>
+    const gift = '50g的茶叶,清洗球'
+    /*const targetSplit = gift.split(',')
+    const targetMap = targetSplit.map(value => {
+        return `<span class="tag">【赠品】${value}</span>`
+    })
+    const str = targetMap.join('')
+    const div = document.querySelector('div')
+    div.innerHTML = str*/
+
+    document.querySelector('div').innerHTML = gift.split(',').map(value => `<span class="tag">【赠品】${value}</span>`).join('')
+
+
+  </script>
+</body>
+
+</html>

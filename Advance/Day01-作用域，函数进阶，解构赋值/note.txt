@@ -32,3 +32,5 @@
            4. 解构形式参数
 
 10. arr.forEach(function(item,index,arr){})
+
+11. arr.filter(function(item,index,arr){})

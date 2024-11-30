@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+</head>
+<body>
+  <script>
+      let words = ["spray", "limit", "exuberant", "destruction", "elite", "present"];
+
+      const modifiedWords = words.filter((word, index, arr) => {
+          console.log(arr[index + 1])
+          arr[index + 1] += " extra";
+          return word.length < 6;
+      });
+
+      console.log(modifiedWords);
+  </script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+1.构造函数
+
+2.实例成员与静态成员
+
+3.Object
+    3.1 静态方法：.assign(targetObj,originObj) ,keys(obj) ,values(obj)
+
+4.Array
+    4.1 实例方法：forEach(),filter(),map(),reduce(),join(),find(),every(),some()
+    4.2 静态方法：.form()
+
+5.String
+    5.1 实例方法：split(),startsWith(),includes(),substring()
+    5.2 实例属性：length
+    5.3 静态方法：String(number)
+
+6.Number
+    6.1 实例方法：toFixed(),Number()
