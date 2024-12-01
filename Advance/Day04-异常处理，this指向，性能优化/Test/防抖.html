@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <style>
+      div {
+          width: 200px;
+          height: 200px;
+          background-color: paleturquoise;
+          color: gray;
+          font-size: 30px;
+      }
+  </style>
+</head>
+<body>
+  <div>
+
+  </div>
+  <script>
+      const div = document.querySelector('div')
+      let i = 0
+
+      function setContent() {
+          i++
+          div.innerHTML = `${i}`
+      }
+
+      /*function debounce(fun,t) {
+          let n
+          return function (){
+              if(n) clearTimeout(n)
+              n = setTimeout(function () {
+                  fun()
+              },t)
+          }
+      }*/
+
+      //1.
+      let n
+      div.addEventListener('mousemove',function (){
+          //2.若已经存在定时器先清空该定时器
+          if(n) clearTimeout(n)
+          //3.
+          n = setTimeout(function () {
+              //4.定时器里写需要实现防抖的逻辑
+              setContent()
+          },500)
+      })
+  </script>
+</body>
+</html>

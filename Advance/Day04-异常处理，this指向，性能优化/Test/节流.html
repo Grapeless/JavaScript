@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <style>
+      div {
+          width: 200px;
+          height: 200px;
+          background-color: paleturquoise;
+          color: gray;
+          font-size: 30px;
+      }
+  </style>
+</head>
+<body>
+  <div>
+
+  </div>
+  <script>
+      const div = document.querySelector('div')
+      let i = 0
+
+      function setContent() {
+          i++
+          div.innerHTML = `${i}`
+      }
+
+      /*function debounce(fun,t) {
+          let n
+          return function (){
+              if(n) clearTimeout(n)
+              n = setTimeout(function () {
+                  fun()
+              },t)
+          }
+      }*/
+
+      //1.
+      let n = null
+      div.addEventListener('mousemove', function () {
+          //2.若已经存在定时器则先不创建新的定时器,程序不执行逻辑；否则创建定时器，且在定时器时间内只执行一次逻辑
+          if (!n) {
+              //3.
+              n = setTimeout(function () {
+                  //4.定时器里写需要实现节流的逻辑
+                  setContent()
+                  //5.不选择clearTimeOut,因为其会使n=1（因为定时器还在运行）而不是赋为空,所以这里直接赋值null
+                  n = null;
+              }, 1000)
+              //这里只是为了正常释放定时器
+              // clearTimeout(n)
+          }
+      })
+  </script>
+</body>
+</html>

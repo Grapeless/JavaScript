@@ -1,0 +1,7 @@
+1.原型（对象）：prototype
+
+2.constructor属性
+
+3.对象原型：__proto__    [[prototype]]
+
+4.原型链 （由原型对象其自己的对象原型指向串起）
