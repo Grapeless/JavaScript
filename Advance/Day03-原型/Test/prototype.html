@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+</head>
+<body>
+  <script>
+      function Pig(uname,age){
+          this.uname = uname
+          this.age = age
+
+      }
+      //通过原型挂载公共方法
+      Pig.prototype.sing = function (){
+          console.log('唱歌')
+      }
+      const p1 = new Pig('lim',14)
+      p1.sing()
+
+      console.log('实例对象:',p1)
+      console.log('原型(对象):',Pig.prototype)
+
+      console.log('原型的constructor属性:',Pig.prototype.constructor)
+      console.log('原型的constructor指向:',Pig.prototype.constructor === Pig)
+
+      console.log('实例对象的__proto__属性:',p1.__proto__)
+      console.log('实例对象的__proto__指向:',p1.__proto__ === Pig.prototype)
+
+      console.log('实例对象的对象原型的constructor指向:',p1.__proto__.constructor === Pig)
+
+
+  </script>
+</body>
+</html>

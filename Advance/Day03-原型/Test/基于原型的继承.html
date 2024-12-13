@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+</head>
+<body>
+  <script>
+
+      function Person() {
+          this.head = 1
+          this.eyes = 2
+      }
+
+      function Woman() {
+      }
+      //实例化一个父类为子类原型赋值(覆盖性)
+      Woman.prototype = new Person
+      //重新设置原型的constructor指回构造函数
+      Woman.prototype.constructor = Woman
+      Woman.prototype.f1 = function () {
+          console.log('1')
+      }
+
+      function Man() {
+      }
+      Man.prototype = new Person
+      Man.prototype.constructor = Man
+
+      const woman = new Woman()
+      const man = new Man()
+
+      console.log(woman,man)
+
+      console.log(Woman.prototype)
+
+  </script>
+</body>
+</html>

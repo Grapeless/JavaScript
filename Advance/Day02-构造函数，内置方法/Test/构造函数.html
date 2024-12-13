@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+</head>
+<body>
+  <script>
+    //构造函数执行过程：
+    //1.new {} is created,一个空对象{}被创建(该{}的引用者即为声明的对象)
+    //2.构造函数的this指向{}
+    //3.根据构造函数初始化{}
+    //4.返回新对象
+
+    function Pig(uname,age){
+        this.uname = uname
+        this.age = age
+        //无需显示return即可得到对象，显示return无效
+    }
+
+    console.log(new Pig())
+    //无参时可省略括号
+    console.log(new Pig)
+
+    console.log(new Pig('lim',12))
+  </script>
+</body>
+</html>
