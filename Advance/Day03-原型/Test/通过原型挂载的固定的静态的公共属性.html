@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+</head>
+<body>
+  <script>
+      function Person() {
+          /*this.head = 1
+          this.eyes = 2*/
+      }
+
+      Person.prototype.eyes = 2
+      Person.prototype.head = 2
+
+      function Man() {
+
+      }
+      Man.prototype = new Person()
+      Man.prototype.constructor = Man
+
+      console.log(new Man().eyes)
+  </script>
+</body>
+</html>

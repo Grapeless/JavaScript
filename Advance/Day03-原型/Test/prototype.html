@@ -30,6 +30,11 @@
 
       console.log('实例对象的对象原型的constructor指向:',p1.__proto__.constructor === Pig)
 
+      console.log('原型的__proto__指向:',Pig.prototype.__proto__ === Object.prototype)
+      console.log('实例对象的__proto__指向:',p1.__proto__ === Pig.prototype)
+
+      console.log('Object的__proto__属性:',Object.prototype.__proto__)
+
 
   </script>
 </body>
